@@ -1,0 +1,34 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<header class="hero-unit" id="banner">
+    <div class="container">
+        <h1>Check your surf spots!! </h1>
+        <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+        <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+    </div>
+</header>
+<br>
+
+<div class="container" id="tourpackages-carousel">
+    <div class="row">
+        <div class="col-xs-18 col-sm-6 col-md-3" ng-repeat="spot in surfSpots">  
+            <div class="thumbnail">
+                <i class="wi {{::getSunImage(spot.info.weather[0].main)}} wi-2x"></i>
+                <div class="caption">
+                    <h4>{{spot.name}}</h4>
+                    <p>{{spot.info.weather[0].main}}</p>
+                    <p>{{spot.info.wind.speed}}</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End row -->
+</div>
+<!-- End container -->
+<footer class="footer">
+    <div class="container">
+        <p>Angular Fullstack v2.0.13 |
+            <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+            <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+    </div>
+</footer>
