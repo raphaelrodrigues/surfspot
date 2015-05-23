@@ -23,7 +23,6 @@ angular.module('surfguruApp')
             })
         }
 
-
         var icons = {
             sunny: "wi-day-sunny",
             cloudy: "wi-day-cloudy",
